@@ -1,3 +1,60 @@
+/* Modo nocturno automático */
+@media (prefers-color-scheme: dark) {
+  body, #root {
+    background: #181a1b !important;
+    color: #e3e3e3 !important;
+  }
+  .container {
+    background: linear-gradient(135deg, #23272b 0%, #222 100%) !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.40);
+  }
+  .consulta-form, .result {
+    background: #23272b !important;
+    color: #e3e3e3 !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.20);
+  }
+  input[type="text"] {
+    background: #181a1b !important;
+    color: #e3e3e3 !important;
+    border: 1px solid #444 !important;
+  }
+  input[type="text"]:focus {
+    border: 1.5px solid #90caf9 !important;
+  }
+  button {
+    background: linear-gradient(90deg, #1565c0 60%, #1976d2 100%) !important;
+    color: #fff !important;
+  }
+  button:disabled {
+    background: #333 !important;
+    color: #aaa !important;
+  }
+  .result-table th {
+    background: #222 !important;
+    color: #90caf9 !important;
+    border-color: #333 !important;
+  }
+  .result-table td {
+    background: #23272b !important;
+    color: #e3e3e3 !important;
+    border-color: #333 !important;
+  }
+  .result-table tr:nth-child(even) {
+    background: #181a1b !important;
+  }
+  .tab {
+    background: #23272b !important;
+    color: #90caf9 !important;
+  }
+  .tab.active {
+    background: linear-gradient(90deg, #1565c0 60%, #1976d2 100%) !important;
+    color: #fff !important;
+  }
+  .tab:not(.active):hover {
+    background: #181a1b !important;
+    color: #42a5f5 !important;
+  }
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
