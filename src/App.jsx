@@ -27,7 +27,11 @@ function App() {
     setError('');
     setResult(null);
     try {
-      const res = await fetch('/api/consulta', {
+      // Detectar entorno y usar la URL correcta
+      const apiBase = import.meta.env.PROD
+        ? 'https://consulta-mot.onrender.com'
+        : '';
+      const res = await fetch(`${apiBase}/api/consulta`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ operador, cupon })
